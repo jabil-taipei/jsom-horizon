@@ -45,13 +45,19 @@ $ mkdir proj; cd proj
 
 # Download source code from Github
 #   use either horizon-core-single.xml or horizon-core-dual.xml
+# setup repo info
 $ repo init \
     --repo-url=git@github.com:jabil-taipei/repo \
     --no-repo-verify \
     -u git@github.com:jabil-taipei/manifests \
     -b jsom-horizon \
     -m horizon-core-single.xml
+
+# download source repo
 $ repo sync -c
+
+# checkout source code(will override your modifications)
+$ repo sync -l
 ```
 
 ## Fixes on Ubuntu 16.04
