@@ -45,7 +45,7 @@ $ mkdir proj; cd proj
 
 # Download source code from Github
 #   use either horizon-core-single.xml or horizon-core-dual.xml
-# setup repo info(add '--depth=1' to speed up the download process by fetch only the last commit)
+# setup repo info(add '--depth=1' to speed up the download process by fetching only the last commits)
 $ repo init \
     --repo-url=git@github.com:jabil-taipei/repo \
     --no-repo-verify \
@@ -54,7 +54,7 @@ $ repo init \
     -m horizon-core-single.xml
 
 # download source repo
-$ repo sync -c --froce-sync
+$ repo sync -c --force-sync
 
 # checkout source code(will override your modifications)
 $ repo sync -l
