@@ -149,3 +149,7 @@ $ sudo make install
     + start programming
 
 ![flash-programming](./inc/flash-programming.png)
+
+## Update Kernel Partition
+
+![flash-kernel](./inc/flash-kernel.png)
