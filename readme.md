@@ -4,6 +4,13 @@
 + Horiozn-Core-Dual
 
 --------------------------------------------------------------------------------
+# Board Definition
+
+![board-definition-1](./inc/board-definition-1.png)
+
+![board-definition-2](./inc/board-definition-2.png)
+
+--------------------------------------------------------------------------------
 # Compilation
 
 + Recommended host platform: Ubuntu 18.04
