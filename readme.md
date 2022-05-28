@@ -4,11 +4,15 @@
 + Horiozn-Core-Dual
 
 --------------------------------------------------------------------------------
-# Board Definition
+# Dock layout
 
-![board-definition-1](./inc/board-definition-1.png)
+## Horizon Dock layout (Front)
 
 ![board-definition-2](./inc/board-definition-2.png)
+
+## Horizon Dock Layout (Back)
+
+![board-definition-1](./inc/board-definition-1.png)
 
 --------------------------------------------------------------------------------
 # Compilation
