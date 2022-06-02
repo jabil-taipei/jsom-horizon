@@ -104,7 +104,9 @@ $ gcc-8 --version
 $ export LANG=en_US.UTF-8 LANGUAGE=en_US.en LC_ALL=en_US.UTF-8
 $ export RK_ROOTFS_SYSTEM=yocto
 
-# Choose either BoardConfig-Horizon-Core-Single.mk or BoardConfig-Horizon-Core-Dual.mk
+# BoardConfig-Horiozn-Core-Dual.mk
+# BoardConfig-Horizon-Core-Single-HDMI.mk
+# BoardConfig-Horizon-Core-Single-MIPI.mk
 $ ./build.sh lunch
 
 # Build all necessary images
@@ -157,3 +159,13 @@ $ sudo make install
 ## Update Kernel Partition
 
 ![flash-kernel](./inc/flash-kernel.png)
+
+--------------------------------------------------------------------------------
+# Others
+
+## Check Jabil Demo Image Version
+
+```bash
+$ hexdump -C -n 16 -s 33554416 /dev/disk/by-partlabel/boot|cut -c 62-77
+s-mipi    010000
+```
