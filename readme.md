@@ -109,16 +109,12 @@ $ export RK_ROOTFS_SYSTEM=yocto
 $ ./build.sh lunch
 
 # Build all necessary images
-$ ./build.sh all
+#   RK_ROOTFS_SYSTEM options: buildroot, yocto
+$ RK_ROOTFS_SYSTEM=buildroot ./build.sh all
 
 # Generate flash image
 $ sudo ./mkfirmware.sh device/rockchip/.BoardConfig.mk
 $ ./build.sh updateimg
-
-# Optional: Build separate components; run './build.sh -h' for the details
-$ ./build.sh uboot
-$ ./build.sh kernel
-$ ./build.sh yocto
 ...
 ```
 
