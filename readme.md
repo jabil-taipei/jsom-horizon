@@ -54,13 +54,12 @@ $ chmod a+x ~/bin/repo
 # Create a new project folder named proj or any other you prefer
 $ mkdir proj; cd proj
 
-# Download source code from Github
-#   use either horizon-core-single.xml or horizon-core-dual.xml
+# Download source code from Github: use either horizon-core-single.xml or horizon-core-dual.xml
 # setup repo info(add '--depth=1' to speed up the download process by fetching only the last commits)
 $ repo init \
     --repo-url=git@github.com:jabil-taipei/repo \
     --no-repo-verify \
-    -u git@github.com:jabil-taipei/manifests \
+    -u git@github.com:jabil-taipei/manifests-kern-5.10 \
     -b jsom-horizon \
     -m horizon-core-single.xml
 
