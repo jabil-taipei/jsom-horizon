@@ -101,6 +101,7 @@ $ gcc-8 --version
 ```bash
 # Execute the following before building or add them to your .bashrc
 $ export LANG=en_US.UTF-8 LANGUAGE=en_US.en LC_ALL=en_US.UTF-8
+# available options: buildroot, yocto
 $ export RK_ROOTFS_SYSTEM=yocto
 
 # BoardConfig-Horiozn-Core-Dual.mk
@@ -109,8 +110,7 @@ $ export RK_ROOTFS_SYSTEM=yocto
 $ ./build.sh lunch
 
 # Build all necessary images
-#   RK_ROOTFS_SYSTEM options: buildroot, yocto
-$ RK_ROOTFS_SYSTEM=buildroot ./build.sh all
+$ ./build.sh all
 
 # Generate flash image
 $ sudo ./mkfirmware.sh device/rockchip/.BoardConfig.mk
