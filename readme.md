@@ -70,39 +70,20 @@ $ repo sync -c --force-sync
 $ repo sync -l
 ```
 
-## Fixes on Ubuntu 16.04
-
-+ replace `PROJ_DIR/yocto/poky/meta/recipes-devtools/rpm` with  `inc/patch/yocto/poky/meta/recipes-devtools/rpm`
-
-```bash
-# Install GCC 8 on Ubuntu 16.04
-$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-$ sudo apt-get update
-$ sudo apt-get install gcc-8 g++-8
-$ gcc-8 --version
-```
-
 ## Build Images
 
-+ artifacts: proj/rockdev
-    + update.img: full flash image
-    + boot.img
-    + MiniLoaderAll.bin
-    + misc.img
-    + oem.img
-    + recovery.img
-    + rootfs.ext4
-    + rootfs.img: a soft link to yocto/build/lastest/rootfs.img
-    + uboot.img
-    + userdata.img
++ artifacts are generated in `rockdev` directory
+    + ![buildroot artifacts](inc/buildroot_artifacts.png)
++ select build target
+    + ![compilation](./inc/compilation.png)
 
-![compilation](./inc/compilation.png)
+### Build Commands
 
 ```bash
 # Execute the following before building or add them to your .bashrc
 $ export LANG=en_US.UTF-8 LANGUAGE=en_US.en LC_ALL=en_US.UTF-8
-# available options: buildroot, yocto
-$ export RK_ROOTFS_SYSTEM=yocto
+# available options: buildroot, yocto(not recogmented)
+$ export RK_ROOTFS_SYSTEM=buildroot
 
 # BoardConfig-Horiozn-Core-Dual.mk
 # BoardConfig-Horizon-Core-Single-HDMI.mk
@@ -136,10 +117,20 @@ $ sudo cp /usr/bin/lz4 /usr/bin/lz4.bak
 $ sudo make install
 ```
 
+>   Fixes of building Yocto target on Ubuntu 16.04
+
++ replace `PROJ_DIR/yocto/poky/meta/recipes-devtools/rpm` with  `inc/patch/yocto/poky/meta/recipes-devtools/rpm`
+
+```bash
+# Install GCC 8 on Ubuntu 16.04
+$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+$ sudo apt-get update
+$ sudo apt-get install gcc-8 g++-8
+$ gcc-8 --version
+```
+
 --------------------------------------------------------------------------------
 # Flash Programming
-
-![jsom-horizon-pcba](./inc/jsom-horizon-pcba.png)
 
 ## Windows
 
