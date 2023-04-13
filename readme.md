@@ -46,28 +46,31 @@ $ sudo locale-gen en_US.UTF-8
 $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $ chmod a+x ~/bin/repo
 
-# alternativel, download from Jabil Github
-$ git clone git@github.com:jabil-taipei/repo
+# alternatively, download from Jabil Github
+$ git clone git@120.24.242.102:sourcecode/rk356x_linux_510/repo
 $ mkdir -p ~/bin; mv repo ~/bin/
-$ chmod a+x ~/bin/repo
+$ chmod a+x ~/bin/repo/repo
+$ export PATH=$PATH:~/bin/repo/
 
 # Create a new project folder named proj or any other you prefer
 $ mkdir proj; cd proj
 
 # Download source code from Github: use either horizon-core-single.xml or horizon-core-dual.xml
+
 # setup repo info(add '--depth=1' to speed up the download process by fetching only the last commits)
 $ repo init \
-    --repo-url=git@github.com:jabil-taipei/repo \
-    --no-repo-verify \
-    -u git@github.com:jabil-taipei/manifests-kern-5.10 \
-    -b jsom-horizon \
-    -m horizon-core-single.xml
+--repo-url=git@120.24.242.102:sourcecode/rk356x_linux_510/repo \
+--no-repo-verify \
+-u git@120.24.242.102:sourcecode/rk356x_linux_510/rockchip/platform/manifests.git \
+-b base_linux \
+-m JSOM_Horizon_Core.xml
 
 # download source repo
 $ repo sync -c --force-sync
 
 # checkout source code(will override your modifications)
 $ repo sync -l
+
 ```
 
 ## Build Images
